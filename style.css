@@ -1,0 +1,482 @@
+@font-face {
+    font-family: Popins;
+    src: url(./font/Poppins-Medium.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: "Poppins";
+}
+
+a{
+    text-decoration: none!important;
+}
+
+ul{
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+header{
+    background-color: transparent;
+}
+
+main{
+    margin-top: 100px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #1a1b27;
+    float: left;
+    margin-left: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media only screen and (max-width: 739px){
+    .checkbtn{
+        display: block;
+    }
+
+    .headline__nav--left, .headline__nav--right{
+        display: none !important;
+    }
+
+    .parallax .section-about-us__title{
+        text-align: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .section-table__item{
+        margin-right: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-items .col h3{
+        font-size: .9rem;
+    }
+
+    .footer-items .col p{
+        font-size: 11px;
+    }
+
+    .footer-items .col ul li{
+        font-size: 11px;
+    }
+
+}
+
+@media only screen and (min-width: 739px) and (max-width: 1023px){
+
+    .checkbtn{
+        display: none;
+    }
+
+    .nav_inner{
+        height: 70px;
+    }
+
+    .logo{
+        font-size: 0.75rem;
+    }
+
+    .headline__nav .nav_inner ul li a{
+        font-size: 10px;
+    }
+
+    .parallax .section-about-us__title{
+        text-align: center;
+        padding-top: 5rem;
+    }
+
+    .section-table{
+        flex-flow: column;
+    }
+
+    .section-table__item{
+        max-width: 85%;
+        margin-bottom: 20px;
+    }
+
+    .footer-items .col h3{
+        font-size: 1.3rem;
+    }
+
+}
+
+@media only screen and (min-width: 1024px){
+
+}
+
+#nav-mobile-input:checked ~ .nav__overlay{
+    display: block;
+}
+
+#nav-mobile-input:checked ~ .nav__mobile{
+    transform:translateX(0%);
+}
+
+.nav__input{
+    opacity: 0;
+}
+
+
+.headline__nav{
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background: #f7f8f8;
+    border-bottom: 2px solid #56b665;
+    width: 100%;
+    z-index: 100;
+}
+
+.nav_inner{
+    height: 100px;
+}
+
+.headline__nav .nav_inner .logo {
+    font-size:1.5rem;
+    color:#007a87;
+}
+
+.headline__nav .nav_inner ul li{
+    margin: 0px 15px;
+}
+
+.headline__nav .nav_inner ul li a{
+    color:#1a1b27;
+    letter-spacing:.02rem;
+    font-weight:500;
+}
+
+.headline__nav .nav_inner ul li a:hover{
+    opacity: 0.5;
+}
+
+.header__active {
+    animation: fadeInDown 1s;
+}
+
+.nav__overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 109;
+    display: none;
+    transition:fadeIn linear .3s;
+}
+
+.nav__mobile{
+    position:fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    max-width: 100%;
+    background-color: #fff;
+    z-index: 110;
+    transform:translateX(-100%);
+    transition: transform linear .2s;
+}
+
+.nav__mobile-close{
+    font-size:1.4rem;
+    color: #666;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.nav__mobile-list{
+    margin-top: 80px;
+    margin-left: 20px;
+}
+
+.nav__mobile-link{
+     color: #333;
+     display: block;
+     padding:8px 0;
+     font-size: 1.4rem;
+}
+
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown{
+    0% {
+        transform: translate(0,-100%);
+        opacity: 0;
+    }
+
+    50%{
+        transform: translate(0,0);
+        opacity: 0.5;
+    }
+
+    100%{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+
+.carousel-item img{
+    animation: fadeIn 1.5s;
+}
+
+section{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: rgb(246, 246, 246);
+}
+
+.section-content__title{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.line-bottom{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    display: block;
+    content: "";
+    background: #007a87;
+    height: 3px;
+}
+
+.section-content{
+    padding-bottom: 3rem;
+}
+
+.section-content__title p{
+    color: #303030;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 32px;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.section-table__item{
+    text-align: center;
+    line-height: 1.5rem;
+    -webkit-box-shadow: 0px 8px 14.72px 1.28px rgb(207 207 207 / 30%);
+    -moz-box-shadow: 0px 8px 14.72px 1.28px rgba(207, 207, 207, 0.3);
+    box-shadow: 0px 8px 14.72px 1.28px rgb(207 207 207 / 30%);
+    border: 0;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.section-table__item:hover{
+    -webkit-box-shadow: 0px 20px 50px 0px rgb(153 153 153 / 50%);
+    -moz-box-shadow: 0px 20px 50px 0px rgba(153, 153, 153, 0.5);
+    box-shadow: 0px 20px 50px 0px rgb(153 153 153 / 50%);
+    transform: translateY(-10px);
+}
+
+.section-table__item .wrapper {
+    padding: 3rem;
+}
+
+.section-table__item .wrapper ::before{
+    content: "";
+    position: absolute;
+    border-left: 2px solid #56b665;
+    border-top: 2px solid #56b665;
+    width: 80px;
+    height: 60px;
+    left: 0;
+    top: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    border-radius: 30px 0px;
+}
+
+.section-table__item .wrapper ::after{
+    content: "";
+    position: absolute;
+    border-right: 2px solid #56b665;
+    border-bottom: 2px solid #56b665;
+    width: 80px;
+    height: 60px;
+    right: 0;
+    bottom: 0;
+    transition: .5s;
+    -webkit-transition: .5s;
+    border-radius: 30px 0px;
+}
+
+.section-table__item .wrapper:hover :before{
+    width: 90%;
+    height: 90%;
+    border-left: 2px solid #56b665;
+    border-top: 2px solid #56b665;
+}
+
+.section-table__item .wrapper:hover ::after{
+    width: 90%;
+    height: 90%;
+    border-right: 2px solid #56b665;
+    border-bottom: 2px solid #56b665;
+}
+
+.section-table__item .wrapper img{
+    width:50px;
+    height:50px;
+}
+
+.section-table__item .wrapper h3{
+    padding-top: 1rem;
+}
+
+.section-table__item .wrapper p{
+    color: #303030;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 32px;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("./img/docusign-7RWBSYA9Rro-unsplash.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-about-us__title{
+    text-align: center;
+    padding-top: 8rem;
+}
+
+.section-about-us__title h2{
+    color: #fff;
+}
+
+.section-about-us__title .line-bottom{
+    background: #fff;
+}
+
+.section-about-us__title p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 32px;
+    padding: 0;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.service a img{
+    cursor: pointer;
+    transition:all 0.3s ease-in-out;
+}
+
+.service a p{
+    color: #303030;
+}
+
+.service a:hover p{
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.service a:hover img{
+    transform: translateY(-5px);
+}
+
+
+
+
+
+
+
+
+
+.section-footer{
+    background:rgb(52, 60, 62);
+    color: #fff;
+}
+.footer-items .col ul{
+    color: #B6BDBF;
+    font-size: 14px;
+}
+
+.text-footer{
+    color: #B6BDBF;
+    font-size: 14px;
+}
+
+.footer-items .col ul li{
+    margin-bottom: 1rem;
+}
+
+.footer-items .col ul li i{
+    padding-right: 3px;
+}
+
+.footer-items .col ul li a{
+    color: #B6BDBF;
+}
+
+
+.scrollToTopBtn {
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    width: 48px;
+    
+    /* place it at the bottom right corner */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /* keep it at the top of everything else */
+    z-index: 100;
+    /* hide with opacity */
+    opacity: 0;
+    /* also add a translate effect */
+    transform: translateY(100px);
+    /* and a transition */
+    transition: all .5s ease
+  }
+      
+  .showBtn {
+    opacity: 1;
+    transform: translateY(0)
+  }
