@@ -240,6 +240,12 @@ main{
 .carousel-item img{
     animation: fadeIn 1.5s;
 }
+.carousel .carousel-inner{
+    height: 80vh;
+}
+.carousel .carousel-inner img{
+    height: 80vh;
+}
 
 section{
     padding-top: 30px;
