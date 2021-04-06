@@ -111,6 +111,14 @@ main{
 
 }
 
+
+/* 
+    =======================   
+            NAVIGATION 
+    =======================    
+*/
+
+
 #nav-mobile-input:checked ~ .nav__overlay{
     display: block;
 }
@@ -237,6 +245,13 @@ main{
     }
 }
 
+
+/* 
+    =======================   
+            CAROUSEL 
+    =======================    
+*/
+
 .carousel-item img{
     animation: fadeIn 1.5s;
 }
@@ -246,6 +261,14 @@ main{
 .carousel .carousel-inner img{
     height: 80vh;
 }
+
+
+/* 
+    =======================   
+            HOME PAGE 
+    =======================    
+*/
+
 
 section{
     padding-top: 30px;
@@ -419,14 +442,6 @@ section{
     transform: translateY(-5px);
 }
 
-
-
-
-
-
-
-
-
 .section-footer{
     background:rgb(52, 60, 62);
     color: #fff;
@@ -481,4 +496,52 @@ section{
   .showBtn {
     opacity: 1;
     transform: translateY(0)
+  }
+
+
+  /* 
+    ========================
+        PAGE SERVICES 
+    ========================
+  */
+
+
+  .divider{
+    position: relative;
+    top: 0;
+    opacity: .5;
+    margin: 0 .3em;
+    font-weight: 700;
+  }
+
+  .card{
+      border:none;
+      background-color: #f7f8f8;
+      transition: all 0.3s linear;
+  }
+
+  .service__row .service__col:hover .card{
+    -webkit-box-shadow: 0px 20px 50px 0px rgb(153 153 153 / 50%);
+    -moz-box-shadow: 0px 20px 50px 0px rgba(153, 153, 153, 0.5);
+    box-shadow: 0px 20px 20px 0px rgb(153 153 153 / 50%);
+    transform: translateY(-10px);
+  }
+
+  .service__col{
+    position: relative;
+    margin: 0;
+    padding: 0 15px 30px;
+    width: 100%;
+  }
+
+  .inner__content{
+      color: #fff;
+  }
+
+  .inner__content .tittle__content a{
+      color: #fff;
+  }
+
+  .bg__service{
+      background-image: url(./img/pexels-nappy-936137.jpg);
   }
